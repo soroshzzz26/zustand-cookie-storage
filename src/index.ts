@@ -98,7 +98,7 @@ export const cookieStorage: StateStorage = {
     return JSON.stringify(keyObject[key]);
   },
   setItem: (storeKey, value) => {
-    const days = 30;
+    const days = 0;
     const expires = new Date();
     expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
     const jsonValue = JSON.parse(value);
