@@ -107,7 +107,7 @@ export const cookieStorage: StateStorage = {
     eachRecursive(jsonValue, (key: string, value: any) => {
       const _value = Array.isArray(value) ? JSON.stringify(value) : value;
       Cookies.set(`${storeKey}${key}`, _value, {
-        expires,
+        expires: "",
         path: "/",
       });
     });
